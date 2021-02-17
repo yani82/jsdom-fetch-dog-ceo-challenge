@@ -62,7 +62,7 @@ function addBreed(breed) {
 }
 
 function updateColor(event) {
-    event.target.style.color = 'palevioletred';
+    event.target.style.color = 'purple';
 }
 
 function addBreedSelectListener() {
@@ -73,13 +73,3 @@ function addBreedSelectListener() {
     });
 }
 
-// let dogSelect = document.getElementById('breed-dropdown')
-// dogSelect.addEventListener("change", (event) => {
-//     makeFetchHappen()
-//     .then(res => {
-//         let dogBreedsArr = Object.keys(res.message)
-            // let fileredArray = dogBreedsArr.filter(breed => {
-                // return breed.startsWith(event.target.value)
-            // })
-            // console.log(event.target.value)
-// })
