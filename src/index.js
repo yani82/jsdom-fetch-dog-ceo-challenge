@@ -52,13 +52,6 @@ function selectBreedsStartingWith(letter) {
     updateBreedList(breeds.filter(breed => breed.startsWith(letter)));
 }
 
-function addBreedSelectListener() {
-    let breedDropdown = document.querySelector('#breed-dropdown'); 
-    breedDropdown.addEventListener('change', function (event) {
-        selectBreedsStartingWith(event.target.value); 
-    });
-}
-
 function addBreed(breed) {
     let ul = document.querySelector('#dog-breeds');
     let li = document.createElement('li');
@@ -71,3 +64,22 @@ function addBreed(breed) {
 function updateColor(event) {
     event.target.style.color = 'palevioletred';
 }
+
+function addBreedSelectListener() {
+    let breedDropdown = document.querySelector('#breed-dropdown'); 
+    breedDropdown.addEventListener('change', function (event) {
+        selectBreedsStartingWith(event.target.value); 
+        console.log(event.target)
+    });
+}
+
+// let dogSelect = document.getElementById('breed-dropdown')
+// dogSelect.addEventListener("change", (event) => {
+//     makeFetchHappen()
+//     .then(res => {
+//         let dogBreedsArr = Object.keys(res.message)
+            // let fileredArray = dogBreedsArr.filter(breed => {
+                // return breed.startsWith(event.target.value)
+            // })
+            // console.log(event.target.value)
+// })
